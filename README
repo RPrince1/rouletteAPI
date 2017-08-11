@@ -1,0 +1,27 @@
+TO BET TYPE IN THE URL http://localhost:8001/api/
+
+**WITH EITHER THE EXTENTION**
+/single/bet/amount
+/multiple/bets
+
+
+/* Types of bet
+	Number 		(0-36)
+	Red or Black	red/black
+	Even or Odd	even/odd 
+	Columns		c1, c2, c3
+	Twelves		t1, t2, t3	
+	Eighteen	e1, e2		
+*/
+
+EXAMPLES
+
+Betting 5 on red
+http://localhost:8001/api/single/red/5
+
+Betting 5 on 0, 5 on red and 5 on 12
+http://localhost:8001/api/multiple/0-5-red-5-12-5
+
+Betting 5 on column1
+http://localhost:8001/api/single/c1/5
+
