@@ -1,0 +1,485 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"userID"
+			],
+			[
+				"get",
+				"getBalance"
+			],
+			[
+				"rando",
+				"randomNum"
+			],
+			[
+				"cont",
+				"contentType"
+			],
+			[
+				"t",
+				"tbody\tTag"
+			],
+			[
+				"body",
+				"bodyParser"
+			],
+			[
+				"tbo",
+				"tbodyEl"
+			],
+			[
+				"tb",
+				"tbodyEl"
+			],
+			[
+				"formCo",
+				"formCont"
+			],
+			[
+				"formc",
+				"formCont"
+			],
+			[
+				"bod",
+				"body-parser"
+			],
+			[
+				"req",
+				"require"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 2559,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "winnings.js",
+			"settings":
+			{
+				"buffer_size": 2579,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spin.js",
+			"settings":
+			{
+				"buffer_size": 815,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "accounts.js",
+			"settings":
+			{
+				"buffer_size": 800,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/richard/Documents/GitHub/skytest/skyTest.js",
+			"settings":
+			{
+				"buffer_size": 1767,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "accounts.json",
+			"settings":
+			{
+				"buffer_size": 29,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/media/richard/0B77-B056/Code/rouletteAPI",
+		"/home/richard/Documents/GitHub/skytest"
+	],
+	"file_history":
+	[
+		"/home/richard/Documents/GitHub/skytest/data.txt",
+		"/media/richard/0B77-B056/Code/rouletteAPI/winnings.js",
+		"/home/richard/Documents/GitHub/rouletteAPI/server.js",
+		"/home/richard/Documents/GitHub/rouletteAPI/package.json",
+		"/home/richard/Documents/GitHub/Plural-Express/app.js",
+		"/home/richard/Documents/GitHub/orgMe/OrgMe/index.html",
+		"/home/richard/Documents/GitHub/skytest/markup.html",
+		"/home/richard/Documents/GitHub/skytest/script.js",
+		"/home/richard/Documents/GitHub/skytest/skyTest.js",
+		"/home/richard/Documents/GitHub/orgMe/OrgMe/css/style.css",
+		"/home/richard/Documents/GitHub/orgMe/OrgMe/js/prefixfree.min.js",
+		"/home/richard/Documents/GitHub/orgMe/OrgMe/scss/style.scss",
+		"/home/richard/Documents/GitHub/orgMe/OrgMe/css/normalize.css",
+		"/home/richard/Documents/GitHub/form-test/test/converter.js",
+		"/home/richard/Documents/GitHub/tech-test/markup.html",
+		"/home/richard/Documents/GitHub/tech-test/script.js",
+		"/home/richard/Documents/GitHub/tech-test/skyTest.js",
+		"/home/richard/Documents/GitHub/form-test/package.json",
+		"/home/richard/Documents/GitHub/sky/markup.html",
+		"/home/richard/Documents/GitHub/sky/skyTest.js",
+		"/home/richard/Documents/GitHub/test/script.js",
+		"/home/richard/Documents/GitHub/test/index.html",
+		"/home/richard/Documents/GitHub/test/server.js",
+		"/home/richard/Documents/GitHub/test/jquery.js",
+		"/home/richard/Documents/GitHub/skytest/public/assets/todo-list.js",
+		"/home/richard/Documents/GitHub/skytest/views/index.ejs",
+		"/home/richard/Documents/GitHub/skytest/controllers/formController.js",
+		"/home/richard/Documents/GitHub/skytest/server.js",
+		"/home/richard/Documents/GitHub/node-js-playlist/Practice/#11 Asyc/app.js",
+		"/home/richard/Documents/GitHub/skytest/index.ejs",
+		"/home/richard/Documents/GitHub/formHandler/server.js",
+		"/home/richard/Documents/GitHub/formHandler/index.html",
+		"/home/richard/Documents/GitHub/skyTest/controller/controller.js",
+		"/home/richard/Documents/GitHub/skyTest/views/markup.ejs",
+		"/home/richard/Documents/GitHub/skyTest/app.js",
+		"/home/richard/Documents/GitHub/skyTest/views/markup.html",
+		"/home/richard/Documents/GitHub/skyTest/Controller/controller.js",
+		"/home/richard/Documents/GitHub/tech-test/data.json"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			");\n",
+			":'/',",
+			"res",
+			"th"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"meeeeee"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								819,
+								819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "winnings.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								100
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spin.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "accounts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								473,
+								473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/richard/Documents/GitHub/skytest/skyTest.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								913,
+								913
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "accounts.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "server.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

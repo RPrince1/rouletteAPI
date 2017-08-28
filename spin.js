@@ -1,5 +1,6 @@
 
 var rn = require('random-number');
+var fs = require('fs')
 
 var gen = rn.generator({
 	min: 0,
@@ -10,6 +11,10 @@ var gen = rn.generator({
 function spin(callback) {
 	var value = gen();
 	var colour = dictionary[value];
+
+	fs.appendFile('history.txt', "," + value, function (err) {
+	  if (err) throw err;
+	});
 	callback([value, colour]);
 }
 
