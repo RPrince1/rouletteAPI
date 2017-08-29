@@ -9,15 +9,17 @@ function verifyUser(userName, password) {
 
 //Returns a bool
 function canBet(userID, betAmount, callback) {
-
-	var balance = getBalance(userID, function(callback, data) {;
-	if (betAmount > balance) {
-		callback(false);
-	}
-	else if (betAmount < balance) {
-		callback(true);
-	}	
-}
+	getBalance(userID, function(balance) {
+			if (betAmount > balance.balance) {
+				callback(false);
+			}
+			else if (betAmount =< balance.balance) {
+				callback(true);
+			}
+			else {
+				callback(null);
+			}	
+	});
 }
 
 //Returns the latest balance after betting
@@ -29,10 +31,12 @@ function updateBalance(userID, winnings) {
 
 //Returns a float of their balance
 function getBalance(userID, callback) {
-	let points = JSON.parse(fs.readFileSync("accounts.json", "utf8"));
-	callback(points[userID]);
+	fs.readFile('accounts.json', 'utf8', function(err, data) {
+		if(err) return console.log(err);
+		//var results = JSON.parse(data);
+		callback((JSON.parse(data))[userID]);
+	});
 }
-
 
 module.exports = {
 	canBet : canBet,

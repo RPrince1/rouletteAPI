@@ -31,6 +31,10 @@ router.get('/history', function(req,res) {
 });
 
 router.get('/test', function(req,res) {
+	/*account.getBalance("001", function(hey) {
+		console.log(hey);
+	});
+*/
 	account.canBet("001", 120, function(a123) {
 		console.log(a123);
 	});
