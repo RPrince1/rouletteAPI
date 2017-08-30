@@ -63,7 +63,7 @@
 			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 2550,
+				"buffer_size": 2623,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -72,7 +72,7 @@
 			"file": "accounts.js",
 			"settings":
 			{
-				"buffer_size": 828,
+				"buffer_size": 971,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -220,15 +220,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2550,
+						"buffer_size": 2623,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								676,
-								676
+								1179,
+								1179
 							]
 						],
 						"settings":
@@ -249,15 +249,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 828,
+						"buffer_size": 971,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								214,
-								214
+								698,
+								698
 							]
 						],
 						"settings":

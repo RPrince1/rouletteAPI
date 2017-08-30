@@ -30,31 +30,29 @@ router.get('/history', function(req,res) {
 	});
 });
 
+//Test route
 router.get('/test', function(req,res) {
-	/*account.getBalance("001", function(hey) {
-		console.log(hey);
-	});
-*/
-	account.canBet("001", 120, function(a123) {
-		console.log(a123);
-	});
-
+	
 });
 
-// accessed via http://localhost:8001/api/single/bet/amount
-// example http://localhost:8001/api/single/red/5
-router.get('/single/:bet/:amount/', function(req, res) {
-	//Verify that they can bet
-	//Deduct from account
-	//Add to account
-
-	spinner.spin(function(result) {
-		console.log(req.params);
-		console.log(result);
-		winnings.returnWinnings(req.params.bet, result, req.params.amount, function(wino) {
-			console.log(wino);
-			res.send("winnings:" + wino);
-		});
+// accessed via http://localhost:8001/api/single/bet/amount/account
+// example http://localhost:8001/api/single/red/5/001
+router.get('/single/:bet/:amount/:account/', function(req, res) {
+	account.canBet(req.params.account, req.params.amount, function(isSufficient) {
+		if (isSufficient) {
+			spinner.spin(function(result) {
+				console.log(req.params);
+				console.log(result);
+				winnings.returnWinnings(req.params.bet, result, req.params.amount, function(winnings) {
+					account.updateBalance("001", (winnings - req.params.amount), function(calls) {
+						res.send("Balance updated for account " + req.params.account + ", you won " + winnings + " betting " + req.params.bet + ". The result was (" +  result + ")");
+					});
+				});
+			});
+		}
+		else {
+			res.send("Insufficient funds");
+		}
 	});
 });
 

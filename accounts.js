@@ -13,7 +13,7 @@ function canBet(userID, betAmount, callback) {
 			if (betAmount > balance.balance) {
 				callback(false);
 			}
-			else if (betAmount =< balance.balance) {
+			else if (betAmount <= balance.balance) {
 				callback(true);
 			}
 			else {
@@ -22,18 +22,27 @@ function canBet(userID, betAmount, callback) {
 	});
 }
 
-//Returns the latest balance after betting
-function updateBalance(userID, winnings) {
 
-	//Add the balance even if it's 0
-	//Return newBalance	
+
+//Returns the latest balance after betting
+function updateBalance(userID, amount, callback) {
+	fs.readFile('accounts.json', 'utf8', function(err, data){
+	    if (err){
+	        console.log(err);
+	    } 
+	    else {
+		    obj = JSON.parse(data); 
+		    obj[userID].balance += amount;
+		    json = JSON.stringify(obj); 
+		    fs.writeFile('accounts.json', json, 'utf8', callback);
+		}
+	});
 }
 
 //Returns a float of their balance
 function getBalance(userID, callback) {
 	fs.readFile('accounts.json', 'utf8', function(err, data) {
 		if(err) return console.log(err);
-		//var results = JSON.parse(data);
 		callback((JSON.parse(data))[userID]);
 	});
 }
