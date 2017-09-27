@@ -22,8 +22,6 @@ function canBet(userID, betAmount, callback) {
 	});
 }
 
-
-
 //Returns the latest balance after betting
 function updateBalance(userID, amount, callback) {
 	fs.readFile('accounts.json', 'utf8', function(err, data){

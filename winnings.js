@@ -12,7 +12,6 @@ var c2 = [2,5,8,11,14,17,20,23,26,29,32,35]
 var c3 = [3,6,9,12,15,18,21,24,27,30,33,36]
 	
 function returnWinnings(bet, result, amount, callback) {
-
 	if (bet >= 0 || bet < 37 ) {
 		if (bet == result[0]) {
 			callback(amount * 36);

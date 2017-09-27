@@ -44,7 +44,7 @@ router.get('/single/:bet/:amount/:account/', function(req, res) {
 				console.log(req.params);
 				console.log(result);
 				winnings.returnWinnings(req.params.bet, result, req.params.amount, function(winnings) {
-					account.updateBalance("001", (winnings - req.params.amount), function(calls) {
+					account.updateBalance(req.params.account, (winnings - req.params.amount), function(calls) {
 						res.send("Balance updated for account " + req.params.account + ", you won " + winnings + " betting " + req.params.bet + ". The result was (" +  result + ")");
 					});
 				});
@@ -57,34 +57,57 @@ router.get('/single/:bet/:amount/:account/', function(req, res) {
 });
 
 // accessed via http://localhost:8001/api/multiple/bets
-// accessed via http://localhost:8001/api/multiple/0-5-red-5-12-5
-//						Bets 5 on 0, red and 12
-router.get('/multiple/:bet/', function(req, res) {
-	spinner.spin(function(result) {
-		console.log(result);
-		bets = (req.params.bet).split("-");
-		doBets(bets, result, function(moneyReturned){
-			res.send(moneyReturned);
+// accessed via http://localhost:8001/api/multiple/0-5-red-5-12-5 // Bets 5 on 0, red and 12
+router.get('/multiple/:bet/:account/', function(req, res) {
+	var allBets = req.params.bet.split("-");
+	//totalBets returns the total amount bet across all bets
+	totalBets(req.params.bet.split("-"), function(totalBet) {
+		/*Check the total bet amount against the amount in the their account
+		  Returns isSufficient either true if able to bet or false if unable to bet */
+		account.canBet(req.params.account, totalBet, function(isSufficient) {
+			console.log("This account was able to bet: " + isSufficient);
+			if(isSufficient) {
+				console.log("bets: " + allBets);
+				spinner.spin(function(result) {
+					console.log("result: " + result);
+					doBets(allBets, result, function(moneyReturned){
+						account.updateBalance(req.params.account, (moneyReturned - totalBet), function(calls) {
+							res.send("Balance updated for account " + req.params.account + ", you won " + moneyReturned + " betting " + totalBet + ". The result was (" +  result + ")");
+						});
+					});
+				});
+			}
+			else {
+				res.send("Insufficient funds");
+			}
 		});
 	});
 });
 
+/*--- Runs through the bets when multiple bets are placed  --*/
 function doBets(bets, result, callback) {
-		//console.log(bets);
-		//console.log(result);
 		var payable = 0;
-		for (var x = 0; x < (bets.length); x += 2) {		
-			console.log(payable);
-			winnings.returnWinnings(bets[x], result, bets[x+1], function(wino) {
+		for (var x = 0; x < (bets.length); x += 2) {	
+			winnings.returnWinnings(bets[x+1], result, bets[x], function(wino) {
 				payable += wino;
 			});
 			if (x == bets.length-2) {
-				callback("winnings: " + payable);
+				console.log("winnings: " + payable);
+				callback(payable);
 			}
 		}
 }
 
-// REGISTER OUR ROUTES -------------------------------
+function totalBets(bets, callback) {
+	var betTotal = 0;
+	for (var x = 0; x < (bets.length); x+=2) {
+		betTotal += Number.parseInt(bets[x]);
+		if (x == bets.length-2) {
+			callback(betTotal);
+		}
+	}
+}
+
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
